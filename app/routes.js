@@ -27,6 +27,14 @@ module.exports = function(app, passport) {
     }));
 
     // =====================================
+    // LOGOUT ==============================
+    // =====================================
+    app.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/');
+    });
+
+    // =====================================
     // SIGNUP ==============================
     // =====================================
     // show the signup form
@@ -72,12 +80,18 @@ module.exports = function(app, passport) {
     }));
 
     // =====================================
-    // LOGOUT ==============================
+    // TWITTER ROUTES ======================
     // =====================================
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
-    });
+    // route for twitter authentication and login
+    app.get('/auth/twitter', 
+        passport.authenticate('twitter'));
+
+    // handle the callback after twitter has authenticated the user
+    app.get('/auth/twitter/callback',
+        passport.authenticate('twitter', {
+            successRedirect : '/profile',
+            failureRedirect : '/'
+    }));
 
 };
 

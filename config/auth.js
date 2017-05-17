@@ -8,11 +8,11 @@ module.exports = {
     },
 
     'twitterAuth' : {
-        'consumerKey'       : 'your-consumer-key-here',
-        'consumerSecret'    : 'your-client-secret-here',
-        'callbackURL'       : 'http://localhost:8080/auth/twitter/callback'
-    },
-
+        'consumerKey'       : 'Wo1ZR4wydot2WqDK90yEozCSI',
+        'consumerSecret'    : 'mOJJn7mYPXfZ5foqwFJwWTo6dKgwnhS2uqQrWFaWkHoeYMzyho',
+        'callbackURL'       : 'http://127.0.0.1:8080/auth/twitter/callback' // Twitter doesn't like localhost:8080
+    },                                                                      // Testing needs to start from http://127.0.0.1:8080
+                                                                            // to avoid an error during redirects to our callback URL
     'googleAuth' : {
         'clientID'      : 'your-secret-clientID-here',
         'clientSecret'  : 'your-client-secret-here',
