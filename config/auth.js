@@ -14,8 +14,8 @@ module.exports = {
     },                                                                      // Testing needs to start from http://127.0.0.1:8080
                                                                             // to avoid an error during redirects to our callback URL
     'googleAuth' : {
-        'clientID'      : 'your-secret-clientID-here',
-        'clientSecret'  : 'your-client-secret-here',
+        'clientID'      : '246995429946-mq987r5r808f6k2o2qhlv7m4bqgqpf8r.apps.googleusercontent.com',
+        'clientSecret'  : 'Fj7JVyOV06es37Gzp1zX9L-_',
         'callbackURL'   : 'http://localhost:8080/auth/google/callback'
     }
 
